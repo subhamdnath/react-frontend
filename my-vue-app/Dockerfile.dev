@@ -1,0 +1,7 @@
+FROM node:slim
+WORKDIR /react-crud-frontend
+COPY package*.json /react-crud-frontend/
+RUN npm install
+COPY . /react-crud-frontend/
+CMD [ "npm", "run", "dev"]
+

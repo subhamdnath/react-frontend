@@ -1,0 +1,14 @@
+services:
+  react_project:
+    container_name: react_crud_frontend_con
+    image: react_crud_frontend_image
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - 5173:5173
+    volumes:
+      - .:/react_crud_frontend
+      - /react-react_crud_frontend/node_modules
+    command: npm run dev
+
